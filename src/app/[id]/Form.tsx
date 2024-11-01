@@ -11,7 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Eye, EyeOff } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useParams } from 'next/navigation'
+import { redirect, useParams } from 'next/navigation'
 import { Success } from './Success'
 
 export function Form() {
