@@ -65,8 +65,7 @@ export function Form() {
 
   useEffect(() => {
     if (!isSuccess) return
-
-    // setTimeout(() => redirect(`${process.env.NEXT_PUBLIC_GUARANTEE_URL}`), 5000)
+    setTimeout(() => redirect(`${process.env.NEXT_PUBLIC_GUARANTEE_URL}`), 5000)
   }, [isSuccess])
 
   return (
