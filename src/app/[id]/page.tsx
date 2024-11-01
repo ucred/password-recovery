@@ -11,7 +11,7 @@ export default async function Home({ params }: { params: Promise<{ id: string }>
 
   return (
     <main className='w-screen h-screen bg-zinc-200 items-center flex justify-center p-4'>
-      <div className='bg-white py-4 px-8 rounded-lg items-center shadow-sm max-w-2xl flex flex-col w-full'>
+      <div className='bg-white py-8 px-8 rounded-lg items-center shadow-sm max-w-2xl flex flex-col w-full h-382'>
         <Header />
 
         {data.success && <Form />}

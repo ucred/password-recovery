@@ -11,7 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Eye, EyeOff } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { redirect, useParams } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import { Success } from './Success'
 
 export function Form() {
@@ -66,14 +66,14 @@ export function Form() {
   useEffect(() => {
     if (!isSuccess) return
 
-    setTimeout(() => redirect(`${process.env.NEXT_PUBLIC_GUARANTEE_URL}`), 5000)
+    // setTimeout(() => redirect(`${process.env.NEXT_PUBLIC_GUARANTEE_URL}`), 5000)
   }, [isSuccess])
 
   return (
     <>
       {!isSuccess
         ? (
-          <form className='flex flex-col w-full gap-4' onSubmit={handleSubmit(_submitForm)}>
+          <form className='flex flex-col w-full gap-4 min-h-80' onSubmit={handleSubmit(_submitForm)}>
             <div className='flex flex-col w-full justify-center items-center mb-6'>
               <span className='font-medium flex text-zinc-500 text-xl'>Recuperação de senha</span>
               <span className='text-sm text-zinc-700'>Por favor, informe uma nova senha</span>
